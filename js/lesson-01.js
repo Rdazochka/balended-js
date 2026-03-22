@@ -16,18 +16,19 @@
 // Виведіть в alert відповідне повідомлення, наприклад:
 // "10 входить в першу чверть"
 
-// const min = Math.floor(Math.random() * 59);
+// const min = Math.floor(Math.random() * 60);
 // if (min < 15) {
-//     alert(`${min} входить у першу чверть      `)
-// }
-      
-        
-//     {
-    
-// } else {
-    
+//     alert(`${min} входить у першу чверть`)
+// } else if (min < 30) {
+//      alert(`${min} входить у другу чверть`)
+// } else if (min < 45) {
+//      alert(`${min} входить у третю четверть`)
+// } else if (min <= 59) {
+//     alert(`${min} входить у четверту чверть`)
 // }
 
+
+//Task 3
 // Змінна num може набувати 4 значення: '1', '2', '3' або '4'
 // (запитуй це значення у користувача через prompt).
 // Якщо вона має значення '1', то у змінну result запишіть 'зима',
@@ -41,7 +42,6 @@
 // const num = Number(prompt("Введіть число"));
 // let result;
 // switch (num) {
-    
 //     case 1:
 //        result = 'зима';
 //         break;
@@ -59,15 +59,105 @@
 // }
 // alert(result);
 
+//Task 4
 // Отримуйте від користувача число (кількість хвилин) через prompt
 // і виводьте у консоль рядок у форматі годин та хвилин.
 // Приклад: користувач вводить в prompt '70' -> в консолі відобразиться '01:10'.
 // Корисне посилання для відображення годин та хвилин у потрібному форматі ('01' замість '1'):
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart#examples
 
-const min = Number(prompt('Введіть число'));
-const hours = Math.floor(min / 60);
-const minutes = min % 60;
-const validHours = String(hours).padStart(2, '0');
-const validMinutes = String(minutes).padStart(2, '0');
-console.log(`${validHours}:${validMinutes}`);
+// const min = Number(prompt('Введіть число'));
+// const hours = Math.floor(min / 60);
+// const minutes = min % 60;
+// const validHours = String(hours).padStart(2, '0');
+// const validMinutes = String(minutes).padStart(2, '0');
+// console.log(`${validHours}:${validMinutes}`);
+
+//Task 5
+// Напишіть код, який запитуватиме у користувача
+// логін за допомогою prompt і виводить результат в консоль браузера
+
+// Після цього додайте перевірку введеного користувачем значення:
+// Якщо відвідувач вводить "Адмін",
+// то prompt запитує пароль (не забудьте зберігти його у змінну для подальшої перевірки).
+// Якщо нічого не ввели або натиснули Cancel,
+// Вивести в alert строку "Скасовано"
+// В іншому випадку вивести в alert рядок "Я вас не знаю"
+
+// Пароль перевіряти так:
+// Якщо введено пароль "Я головний",
+// то вивести в alert рядок "Добрий день!",
+// в іншому випадку вивести в alert рядок "Невірний пароль!"
+
+// const login = prompt(`Введіть логін`)
+// console.log(login);
+// let i;
+// if (login === `Адмін`) {
+//     i = prompt(`Введіть пароль`);
+
+// if (i === `Я головний`) {
+//     alert(`Добрий день`)
+// } else {
+//    alert (`Невірний пароль`)
+// }
+
+// } else if (
+//     login === null || login === ``) {
+//     alert(`Скасовано`)
+// }
+// else {
+//     alert(`Я вас не знаю`)
+// }
+
+//Task 6
+// Використайте цикл while, щоб вивести в console всі числа від 0 до 20 включно.
+
+// let i = 0;
+// while (i <= 20) {
+//     console.log(i);
+//     i++;
+// }
+
+//Task 7
+// Напишіть функцію getNumbers(min, max), що приймає 2 параметри -
+// мінімальне і максимальне число відповідно.
+// Напишіть цикл всередині функції, який виводить у консоль
+// всі числа від max до min за спаданням.
+// Окрім цього, підрахуйте суму всіх парних чисел в цьому циклі
+// і поверніть її з функції.
+
+// let min = Number(prompt(`Веедіть мінімальне число`));
+// let max = Number(prompt(`Введіть максимальне число`))
+// let sum = 0;
+// function getNumbers(min, max) {
+    
+//     for (let i = max; i >= min; i--) {
+//         console.log(i);
+//         if (i % 2 === 0) {
+//             sum += i;
+//         }
+//     }
+//     return sum;
+// }
+// getNumbers(min, max);
+// console.log(`Сумма чисел ${sum}`);
+
+//Task 8
+// Напишіть функцію min(a, b), яка приймає 2 числа і повертає меньше з них.
+// Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
+// повертати з функції рядок - 'Not a number!'.
+
+
+const a = Number(prompt(`Введіть число a`));
+const b = Number(prompt(`Введіть число b`));
+const i = `Not a number!`;
+if (a && b === Number) {
+    function min(a, b) {
+        if (a < b) {
+            return (a);
+        } else {
+            return (b)
+        }
+    }
+} 
+min(a, b);
